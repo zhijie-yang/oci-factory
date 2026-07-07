@@ -13,4 +13,35 @@
 
 ---
 
+- type: dropdown
+  attributes:
+    label: Type
+    description: What type best describes this work item?
+    multiple: false
+    options:
+      - Onboard of a new image
+      - Image trigger update
+      - Image documentation update
+      - Image misc update
+      - Other
+  validations:
+    required: false  <!--- Run an agentic workflow to determine the rock/<type> if not chosen --->
+
+- type: dropdown
+  attributes:
+    label: Urgency
+    description: What is the due date of this work item?
+    multiple: false
+    options:
+      - No hard limits
+      - Within a week
+      - Within a pulse (2 weeks)
+      - Within a month
+      - Within a cycle
+    default: 0
+  validations:
+    required: true
+
+---
+
 *Picture of a cool rock:*
