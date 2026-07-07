@@ -13,34 +13,22 @@
 
 ---
 
-- type: dropdown
-  attributes:
-    label: Type
-    description: What type best describes this work item?
-    multiple: false
-    options:
-      - Onboard of a new image
-      - Image trigger update
-      - Image documentation update
-      - Image misc update
-      - Other
-  validations:
-    required: false  <!--- Run an agentic workflow to determine the rock/<type> if not chosen --->
+Which type best describes this work item?
+ - [ ] Onboard of a new image
+ - [ ] Image trigger update
+ - [ ] Image documentation update
+ - [ ] Image misc update
+ - [ ] None of these options above  <!--- Run an agentic workflow to determine the rock/<type> in this case or empty choices --->
+ 
 
-- type: dropdown
-  attributes:
-    label: Urgency
-    description: What is the due date of this work item?
-    multiple: false
-    options:
-      - No hard limits
-      - Within a week
-      - Within a pulse (2 weeks)
-      - Within a month
-      - Within a cycle
-    default: 0
-  validations:
-    required: true
+What is the due date of this work item?
+<!--- Leaving the answer empty is considered as "No hard limits" --->
+<!--- The earliest due applies if multiple choices are ticked --->
+ - [ ] Within a week
+ - [ ] Within a pulse (2 weeks)
+ - [ ] Within a month
+ - [ ] Within a cycle
+ - [ ] No hard limits
 
 ---
 
